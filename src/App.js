@@ -51,8 +51,8 @@ function App() {
   async function getWeatherLocation () {
     if(cityName === '') {
 
-      let res = await axios.get(`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=pt_br&appid=${ApiKey}`);
-      let forecast = await axios.get(`http://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&lang=pt_br&appid=${ApiKey}`);
+      let res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=pt_br&appid=${ApiKey}`);
+      let forecast = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&lang=pt_br&appid=${ApiKey}`);
       let temp = res.data.main.temp - 273.15;
       setCityName(res.data.name);
       setCountryName(res.data.sys.country);
@@ -96,8 +96,8 @@ function App() {
 
   const getWeather = async (e) => {
     const city = e.target.value;
-    let res = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&lang=pt_br&appid=${ApiKey}`);
-    let forecast = await axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=pt_br&appid=${ApiKey}`);
+    let res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=pt_br&appid=${ApiKey}`);
+    let forecast = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=pt_br&appid=${ApiKey}`);
     let temp = res.data.main.temp - 273.15;
     setCityName(res.data.name);
     setCountryName(res.data.sys.country);
