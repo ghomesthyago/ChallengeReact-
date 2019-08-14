@@ -48,7 +48,7 @@ export const GlobalStyle = createGlobalStyle`
     @media(max-width: 680px){
       padding:0 10px;
       height: 40px;
-      width: 399px;
+      width: 100%;
     }
 
     background: rgba(255, 255, 255, 0.3);
