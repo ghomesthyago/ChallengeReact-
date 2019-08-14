@@ -70,6 +70,11 @@ export const Header = styled.div `
     height: 100%;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
+
+    @media(max-width: 680px){
+      padding: 0 20px;
+    }
 
     h2 {
       color: #F4F5F5;
@@ -152,6 +157,7 @@ export const Footer = styled.div `
   flex-direction: column;
   margin: 5px 106px;
   height: 100%;
+  box-sizing: border-box;
 
   @media(max-width: 680px){
     width: 100%;
@@ -165,6 +171,7 @@ export const Footer = styled.div `
 
     @media(max-width: 680px){
       margin: 5px;
+      padding: 0 20px;
     }
   }
 
@@ -175,10 +182,12 @@ export const Block = styled.div `
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
 
   @media(max-width: 680px){
     flex-direction: column;
     width: 100%;
+    padding: 0 20px;
   }
 `;
 
