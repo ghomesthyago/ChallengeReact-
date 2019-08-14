@@ -103,7 +103,27 @@ function App() {
     setCountryName(res.data.sys.country);
     setWeatherInfo(res.data.weather[0].description);
     setIcon(res.data.weather[0].icon);
-    setTemp(temp.toFixed(0));                              
+    setTemp(temp.toFixed(0)); 
+    
+    setTemp1(forecast.data.list[7].main.temp - 273.15);
+    setDate1(forecast.data.list[7].dt);
+    setIcon1(forecast.data.list[7].weather[0].icon);
+
+    setTemp2(forecast.data.list[15].main.temp - 273.15);
+    setDate2(forecast.data.list[15].dt);
+    setIcon2(forecast.data.list[15].weather[0].icon);
+
+    setTemp3(forecast.data.list[23].main.temp - 273.15);
+    setDate3(forecast.data.list[23].dt);
+    setIcon3(forecast.data.list[23].weather[0].icon);
+
+    setTemp4(forecast.data.list[31].main.temp - 273.15);
+    setDate4(forecast.data.list[31].dt);
+    setIcon4(forecast.data.list[31].weather[0].icon);
+
+    setTemp5(forecast.data.list[39].main.temp - 273.15);
+    setDate5(forecast.data.list[39].dt);
+    setIcon5(forecast.data.list[39].weather[0].icon);
 
   }
 
